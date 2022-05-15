@@ -9,6 +9,8 @@ private:
 
 public:
 
+	double get_r(double x);
+	double get_t(double x);
 
 	// r0 -> Radio encastre
 	// r1 -> Radio punta
