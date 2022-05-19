@@ -4,12 +4,13 @@
 #include <sstream>
 #include <string>
 #include <sciplot/sciplot.hpp>
+#include "Util.h"
 
 DatosPerfiles::DatosPerfiles(const std::string &path_drag, const std::string &path_lift)
 {
 	for (int i = 0; i <= 100; i++)
 	{
-		alphas[i] = -25.0 + 0.5 * i;
+		alphas[i] = DEG_TO_RAD * (-25.0 + 0.5 * i);
 	}
 
 	std::fstream drag;

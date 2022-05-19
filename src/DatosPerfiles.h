@@ -1,3 +1,4 @@
+#pragma once
 #include <optional>
 #include <string>
 #include <array>
@@ -18,6 +19,7 @@ public:
 	array_datos datos_drag;
 
 	std::array<double, 8> reynolds = {40000, 80000, 160000, 360000, 700000, 1000000, 2000000, 5000000};
+	// Alphas en radianes
 	std::array<double, 101> alphas;
 
 	// Carga los datos y genera alpha
