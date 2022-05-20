@@ -10,7 +10,7 @@ DatosPerfiles::DatosPerfiles(const std::string &path_drag, const std::string &pa
 {
 	for (int i = 0; i <= 100; i++)
 	{
-		alphas[i] = DEG_TO_RAD * (-25.0 + 0.5 * i);
+		alphas[i] = M_DEG_TO_RAD * (-25.0 + 0.5 * i);
 	}
 
 	std::fstream drag;
@@ -68,6 +68,8 @@ void DatosPerfiles::carga_datos(DatosPerfiles::array_datos& objetivo, std::fstre
 void DatosPerfiles::graficar(const std::string &path_salida_lift, const std::string &path_salida_drag)
 {
 	sciplot::Plot lift, drag;
+	lift.palette(PALETA);
+	drag.palette(PALETA);
 
 	lift.fontSize(6);
 	drag.fontSize(6);
